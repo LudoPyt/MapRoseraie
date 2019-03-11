@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rose.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @rose.description %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @rose.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @rose.latitude %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @rose.family %>
+</p>
+
+<p>
+  <strong>Creationdate:</strong>
+  <%= @rose.creationDate %>
+</p>
+
+<%= link_to 'Edit', edit_rose_path(@rose) %> |
+<%= link_to 'Back', roses_path %>

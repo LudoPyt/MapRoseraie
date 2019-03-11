@@ -1,0 +1,47 @@
+<%= form_with(model: rose, local: true) do |form| %>
+  <% if rose.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rose.errors.count, "error") %> prohibited this rose from being saved:</h2>
+
+      <ul>
+      <% rose.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :family %>
+    <%= form.text_field :family %>
+  </div>
+
+  <div class="field">
+    <%= form.label :creationDate %>
+    <%= form.number_field :creationDate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

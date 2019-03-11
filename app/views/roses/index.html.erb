@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Roses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Family</th>
+      <th>Creationdate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roses.each do |rose| %>
+      <tr>
+        <td><%= rose.name %></td>
+        <td><%= rose.description %></td>
+        <td><%= rose.longitude %></td>
+        <td><%= rose.latitude %></td>
+        <td><%= rose.family %></td>
+        <td><%= rose.creationDate %></td>
+        <td><%= link_to 'Show', rose %></td>
+        <td><%= link_to 'Edit', edit_rose_path(rose) %></td>
+        <td><%= link_to 'Destroy', rose, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rose', new_rose_path %>
